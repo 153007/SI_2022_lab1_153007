@@ -1,0 +1,102 @@
+ git init - Инициализирање на локално гит репозиториум
+ git remote add origin git@github.com:153007/SI_2022_lab1_153007.git - поврзување со одалечен репозиториум
+ git status - проверка на статус
+ 4. git pull origin master - повлекување на промените на одалечениот репозиториум 
+ 5. git add shopping_list.txt - додавање на датотеката во гит
+ 5. git status - проверка за дали датотеката е додадена
+ 5. git commit -m "Add 5 items to the shopping list" - креирање на комит со порака
+ 6. git add shopping_list.txt - додавање на дадотеката во staging по модифицирање
+ 6. git commit -m "Add quantities to the items" - креирање на комит со порака
+ 7. git branch branch1 - креирање на нова гранка branch1 
+ 7. git branch branch2 - креирање на нова гранка branch2
+ 9. git push origin master - синхронизирање на гранката мастер со оддалечениот репозиториум
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 687 bytes | 687.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:153007/SI_2022_lab1_153007.git
+   c0bed05..fad7c88  master -> master
+ 9. git push origin branch1 - синхронизирање на гранката branch1 со оддалечениот репозиториум
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch1' on GitHub by visiting:
+remote:      https://github.com/153007/SI_2022_lab1_153007/pull/new/branch1
+remote:
+To github.com:153007/SI_2022_lab1_153007.git
+ * [new branch]      branch1 -> branch1
+ 9. git push origin branch2  - синхронизирање на гранката branch2 со оддалечениот репозиториум
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch2' on GitHub by visiting:
+remote:      https://github.com/153007/SI_2022_lab1_153007/pull/new/branch2
+remote:
+To github.com:153007/SI_2022_lab1_153007.git
+ * [new branch]      branch2 -> branch2
+11.  git add shopping_list.txt - додавање на датотеката во staging 
+11.  git commit -m "Changed quantity on item #5" - креираење комит со порака
+[branch1 3d58592] Changed quantity on item #5
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+13.  git commit -m "Changed quantity on item #2" - креираење комит со порака
+[master 5a5eca7] Changed quantity on item #2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+14. git push origin master - синхронизација со оддалечениот репозиториум
+14. git push origin branch1 - синхронизација со оддалечениот репозиториум
+14. git push origin branch2 - синхронизација со оддалечениот репозиториум
+16. git commit -m "Modify item #4" - креирање на комит со порака по додавање на датотеката во staging 
+
+ git status
+On branch branch2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   shopping_list.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ git add shopping_list.txt
+
+ git status
+On branch branch2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   shopping_list.txt
+
+ git commit -m "Modify item #4"
+[branch2 392a362] Modify item #4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ 
+18. git commit --amend -m "Modify #4 and add item #6" - промена на последниот комит со нова промена на листата
+19.  git commit --amend -m "Modify #4 and add item #6"
+[branch2 4b9fbc5] Modify #4 and add item #6
+ Date: Sat Mar 26 23:27:53 2022 +0100
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+20. git merge branch1 - спојување на гранката branch1 кон гранката master
+21.  git merge branch2 - спојување на гранката branch2 кон мастер при што се појави конфликт 
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+21. git status - проверка на гит статус
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   shopping_list.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+21.  git add shopping_list.txt - додавање кон staging по решен конфликт во датотеката
+21.  git status - повторна проверка 
+On branch master
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   shopping_list.txt
+21.  git commit -m "resolved conflicts" - креирање на комит со решени конфликти
+[master 6177e25] resolved conflicts
+
