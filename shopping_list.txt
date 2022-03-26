@@ -1,5 +1,5 @@
-1. leb
-2. mleko
-3. maslo
-4. brashno
-5. shecker
+1. leb x1
+2. mleko x2
+3. maslo x2
+4. brashno x3
+5. shecker x2
