@@ -1,5 +1,6 @@
 1. leb x1
 2. mleko x2
 3. maslo x2
-4. brashno x3
+4. jajca x3
 5. shecker x2
+6. med
